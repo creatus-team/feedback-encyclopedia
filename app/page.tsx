@@ -1,4 +1,5 @@
 "use client";
+// Automatic Deployment Test: Vercel should pick this up!
 
 import { useState, useEffect, useMemo } from "react";
 
@@ -160,8 +161,8 @@ export default function Home() {
                   setAiAnalysisResults(null); // Clear AI results on category click
                 }}
                 className={`px-8 py-5 rounded-2xl text-xl font-bold transition-all duration-200 border shadow-sm flex-grow md:flex-grow-0 text-center ${!aiAnalysisResults && selectedCategory === category
-                    ? "bg-gray-900 text-white border-gray-900 hover:bg-gray-800 shadow-md transform scale-105"
-                    : "bg-white text-gray-500 border-gray-200 hover:bg-gray-50 hover:border-gray-300"
+                  ? "bg-gray-900 text-white border-gray-900 hover:bg-gray-800 shadow-md transform scale-105"
+                  : "bg-white text-gray-500 border-gray-200 hover:bg-gray-50 hover:border-gray-300"
                   }`}
               >
                 {category}
@@ -176,8 +177,8 @@ export default function Home() {
             <input
               type="text"
               className={`block w-full pl-6 pr-32 py-5 text-lg border rounded-2xl bg-white focus:outline-none focus:ring-4 transition-all placeholder:text-gray-400 ${aiAnalysisResults
-                  ? "border-blue-500 ring-4 ring-blue-500/10"
-                  : "border-gray-200 focus:ring-blue-500/10 focus:border-blue-500"
+                ? "border-blue-500 ring-4 ring-blue-500/10"
+                : "border-gray-200 focus:ring-blue-500/10 focus:border-blue-500"
                 }`}
               placeholder="내가 적은 문제점을 복사하여 붙여넣어보세요. 관련도순으로 찾아드립니다."
               value={searchQuery}
@@ -200,8 +201,8 @@ export default function Home() {
                 onClick={handleAiSearch}
                 disabled={isAiSearching}
                 className={`h-full px-5 rounded-xl font-bold flex items-center gap-2 transition-all ${isAiSearching
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95"
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg active:scale-95"
                   }`}
               >
                 {isAiSearching ? (
@@ -246,8 +247,8 @@ export default function Home() {
                     key={index}
                     onClick={() => toggleExpand(index)}
                     className={`bg-white rounded-3xl border transition-all duration-300 cursor-pointer overflow-hidden ${isExpanded
-                        ? "border-blue-500 ring-4 ring-blue-500/10 shadow-xl scale-[1.01] relative z-10"
-                        : "border-gray-100 hover:border-gray-300 hover:shadow-md"
+                      ? "border-blue-500 ring-4 ring-blue-500/10 shadow-xl scale-[1.01] relative z-10"
+                      : "border-gray-100 hover:border-gray-300 hover:shadow-md"
                       }`}
                   >
                     {/* Card Header (Always Visible) */}
@@ -306,8 +307,8 @@ export default function Home() {
                           <button
                             onClick={(e) => copyToClipboard(e, currentSolution, index)}
                             className={`absolute top-4 right-4 p-2 rounded-lg transition-all flex items-center gap-2 ${isCopied
-                                ? "bg-green-100 text-green-700"
-                                : "bg-blue-100 text-blue-500 hover:bg-blue-200 hover:text-blue-700"
+                              ? "bg-green-100 text-green-700"
+                              : "bg-blue-100 text-blue-500 hover:bg-blue-200 hover:text-blue-700"
                               }`}
                             title="내용 복사"
                           >
